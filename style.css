@@ -1,3 +1,190 @@
+/* Basic page settings */
+:root {
+    --navy: #243447;
+    --blue: #426b8a;
+    --light-blue: #eef4f7;
+    --white: #ffffff;
+    --text: #2f3740;
+    --muted: #66727d;
+    --border: #d4dee5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background-color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(90%, 960px);
+    margin: 0 auto;
+}
+
+/* Header and navigation */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--navy);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 64px;
+}
+
+.site-name {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Introduction area */
+.hero {
+    padding: 72px 0;
+    background-color: var(--light-blue);
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.profile-photo {
+    width: 230px;
+    height: 230px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border: 6px solid var(--white);
+    border-radius: 50%;
+    box-shadow: 0 3px 12px rgba(36, 52, 71, 0.18);
+}
+
+.eyebrow {
+    margin: 0 0 4px;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--navy);
+    line-height: 1.25;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+}
+
+h2 {
+    margin: 0 0 24px;
+    padding-bottom: 8px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--blue);
+}
+
+h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+}
+
+.intro {
+    max-width: 580px;
+    margin: 0 0 24px;
+    font-size: 1.08rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 18px;
+    color: var(--white);
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.button:hover,
+.button:focus {
+    color: var(--blue);
+    background-color: var(--white);
+}
+
+/* Main sections */
+.section {
+    padding: 56px 0;
+    scroll-margin-top: 64px;
+}
+
+.section-alt {
+    background-color: var(--light-blue);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.section p:last-child {
+    margin-bottom: 0;
+}
+
+.education-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.education-item {
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--blue);
+    box-shadow: 0 2px 6px rgba(36, 52, 71, 0.08);
+}
+
+.education-item p {
+    margin: 3px 0;
+    color: var(--muted);
+}
 
 .tag-list {
     display: flex;
@@ -10,7 +197,7 @@
 
 .tag-list li {
     padding: 8px 16px;
-    background-color: var(--light-pink);
+    background-color: var(--light-blue);
     border: 1px solid var(--border);
     border-radius: 4px;
 }
@@ -26,10 +213,8 @@
 .contact-details {
     margin-top: 20px;
     padding: 18px 20px;
-    background-color: var(--butter-yellow);
-    background-image: radial-gradient(var(--dot) 1.5px, transparent 1.5px);
-    background-size: 16px 16px;
-    border-left: 4px solid var(--pink);
+    background-color: var(--light-blue);
+    border-left: 4px solid var(--blue);
     font-style: normal;
 }
 
@@ -38,11 +223,11 @@
 }
 
 a {
-    color: var(--dark-pink);
+    color: var(--blue);
 }
 
 a:focus-visible {
-    outline: 2px solid var(--dark-pink);
+    outline: 2px solid var(--blue);
     outline-offset: 3px;
 }
 
@@ -50,7 +235,7 @@ a:focus-visible {
 .site-footer {
     padding: 22px 0;
     color: var(--white);
-    background-color: var(--dark-pink);
+    background-color: var(--navy);
     text-align: center;
 }
 
