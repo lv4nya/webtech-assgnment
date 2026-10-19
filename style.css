@@ -1,4 +1,4 @@
-/* Basic page settings */
+/* Colour variables */
 :root {
     --navy: #243447;
     --blue: #426b8a;
@@ -9,6 +9,7 @@
     --border: #d4dee5;
 }
 
+/* Reset */
 * {
     box-sizing: border-box;
 }
@@ -27,7 +28,8 @@ body {
 }
 
 .container {
-    width: min(90%, 960px);
+    width: 90%;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -35,7 +37,7 @@ body {
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     background-color: var(--navy);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
@@ -76,7 +78,7 @@ body {
     text-underline-offset: 4px;
 }
 
-/* Introduction area */
+/* Hero section */
 .hero {
     padding: 72px 0;
     background-color: var(--light-blue);
@@ -94,6 +96,7 @@ body {
     height: 230px;
     flex-shrink: 0;
     object-fit: cover;
+    background-color: var(--white);
     border: 6px solid var(--white);
     border-radius: 50%;
     box-shadow: 0 3px 12px rgba(36, 52, 71, 0.18);
@@ -167,6 +170,7 @@ h3 {
     margin-bottom: 0;
 }
 
+/* Education cards */
 .education-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -186,6 +190,7 @@ h3 {
     color: var(--muted);
 }
 
+/* Skills */
 .tag-list {
     display: flex;
     flex-wrap: wrap;
@@ -202,6 +207,7 @@ h3 {
     border-radius: 4px;
 }
 
+/* Interests */
 .interest-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -210,6 +216,7 @@ h3 {
     padding-left: 20px;
 }
 
+/* Contact */
 .contact-details {
     margin-top: 20px;
     padding: 18px 20px;
@@ -243,7 +250,7 @@ a:focus-visible {
     margin: 0;
 }
 
-/* Smaller screens */
+/* Tablet and mobile layout */
 @media (max-width: 700px) {
     .header-content {
         flex-direction: column;
